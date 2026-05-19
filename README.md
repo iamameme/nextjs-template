@@ -104,3 +104,28 @@ Environment variables:
 - `HOSTNAME=0.0.0.0`
 - `PORT=3000`
 - `NEXT_TELEMETRY_DISABLED=1`
+
+## Product-Incubation Deploy Contract
+
+This template ships with save/deploy intent docs + skills under:
+- `docs/`
+- `.codex/skills/`
+- `AGENTS.md`
+
+Canonical prompts:
+1. `save this version`
+2. `deploy this app`
+3. `what is my app url?`
+
+Deploy uses manual relay (no local `COOLIFY_*` required):
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File `
+  <path-to-aws-coolify-setup>\scripts\riot-coolify-deploy-via-gateway.ps1 `
+  -TargetRepoPath "C:\path\to\this\repo"
+```
+
+Template includes a baseline `riot.config.json`; first deploy fills in `coolify.appUuid` and deploy URL.
+
+First deploy behavior:
+- If `riot.config.json.coolify.appUuid` is missing, relay can bootstrap app wiring and commit config automatically.
+- First bootstrap requires GitHub repo-admin rights (deploy key + commit to `main`).

@@ -1,5 +1,22 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# Product-Incubation Agent Contract
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+Use with:
+- `docs/WINDSURF-INTENT-CONTRACT.md`
+- `docs/WINDSURF-QUICKSTART.md`
+- `docs/PRODUCT-INCUBATION-DEPLOY.md`
+
+Canonical user intents:
+1. `save this version`
+- stage all changes, commit once, push `HEAD` to `origin/main`
+
+2. `deploy this app`
+- deploy through manual relay using `aws-coolify-setup/scripts/riot-coolify-deploy-via-gateway.ps1`
+- relay can auto-bootstrap first deploy when `coolify.appUuid` is missing
+- first bootstrap requires GitHub repo-admin rights (deploy key + config commit)
+
+3. `what is my app url?`
+- read `riot.config.json` (`coolify.domain` fallback `metadata.data.deploy-url`)
+
+## Next.js Rule
+
+This template targets modern Next.js behavior. Validate assumptions against project docs before making framework-level changes.

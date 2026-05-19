@@ -1,0 +1,4 @@
+interface:
+  display_name: "Riot Deploy Coolify"
+  short_description: "Deploy Product-Incubation apps through manual Coolify gateway"
+  default_prompt: "Use this when the user asks to deploy or get URL; trigger deploy via manual relay with auto bootstrap for first deploy if appUuid is missing."

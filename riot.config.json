@@ -1,0 +1,24 @@
+{
+  "framework": "nextjs",
+  "frameworkMajor": 16,
+  "template": "product-incubation-nextjs-template",
+  "templateVersion": "1.0.0",
+  "riotSpecVersion": 1,
+  "metadata": {
+    "schemaVersion": 1,
+    "managedByRiot": true,
+    "onboardingSource": "template",
+    "tags": [],
+    "data": {
+      "deploy-provider": "coolify-manual-gateway"
+    }
+  },
+  "coolify": {
+    "projectUuid": "project",
+    "environmentName": "production",
+    "gitBranch": "main",
+    "buildPack": "dockerfile",
+    "dockerfile": "/Dockerfile",
+    "portsExposes": "3000"
+  }
+}
